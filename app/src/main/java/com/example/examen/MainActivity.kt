@@ -25,6 +25,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -96,7 +97,6 @@ fun Container(message: List<Message>) {
                 .padding(innerPadding),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            Box(modifier = Modifier) {
                 Box(modifier = Modifier) {
                     Row (modifier = Modifier.padding(all = 8.dp)) {
                         Image(
@@ -113,10 +113,11 @@ fun Container(message: List<Message>) {
                         }
                     }
                 }
-            }
+
 
             Button(onClick = { /*TODO*/ }) {
                 Text(text = "Elegir un nuevo color")
+
             }
             LazyColumn {
                 items(message) { message ->
